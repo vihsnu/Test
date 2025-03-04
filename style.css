@@ -1,0 +1,381 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  padding: 80px 120px;
+}
+.main {
+  display: flex;
+  gap: 20px;
+}
+h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  padding-top: 10px;
+  background: linear-gradient(to right, rgb(218, 39, 39), rgb(255, 187, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.cart-img {
+  height: 230px;
+  width: 230px;
+  object-fit: cover;
+  border-radius: 20px;
+  align-self: center;
+}
+.cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: white;
+  width: 150px;
+  height: 40px;
+  gap: 5px;
+  border: none;
+  margin-top: 130px;
+  margin-left: 50px;
+  position: absolute;
+  border: 1px solid gray;
+  transition: all 1s ease;
+  z-index: 2;
+}
+.sec {
+  z-index: 1;
+  border-radius: 25px;
+  width: 150px;
+  height: 40px;
+  gap: 5px;
+  border: none;
+  margin-top: 130px;
+  margin-left: 50px;
+  position: absolute;
+  border: 1px solid gray;
+  background-color: orangered;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.sec > img {
+  width: 10px;
+  height: 10px;
+}
+
+.item-section {
+  width: 75%;
+}
+.cart-row {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+.cart {
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  transition: all 0.5s ease;
+  border-radius: 25px;
+  /* gap: 5px; */
+}
+.cart-btn:hover {
+  border: 2px solid orangered;
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: orangered;
+}
+.cart:hover {
+  transform: scale(0.95);
+  border: 2px solid rgb(218, 70, 16);
+}
+.cart-about {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding: 10px;
+  gap: 5px;
+}
+.cart-about > span:nth-child(1) {
+  opacity: 0.5;
+  color: black;
+}
+.cart-about > span:nth-child(2) {
+  font-weight: 900;
+  opacity: 0.9;
+}
+.cart-about > span:nth-child(3) {
+  color: orangered;
+}
+.cart-section {
+  width: 30%;
+  height: 300px;
+  border-radius: 15px;
+  padding: 15px;
+}
+.cart-section > h3 {
+  color: rgb(207, 59, 5);
+  font-size: 24px;
+}
+
+.initial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.initial > p {
+  opacity: 0.6;
+}
+
+.items-container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 15px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, orange, red); /* Gradient effect */
+  transition: width 0.5s ease;
+}
+
+.item:hover::after,
+.item.active::after {
+  width: 100%;
+}
+
+.item-names {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
+.item-names > span {
+  font-weight: bold;
+  opacity: 0.8;
+}
+.item-names > div > span:nth-child(1) {
+  color: orangered;
+}
+.item-names > div > span:nth-child(2) {
+  opacity: 0.6;
+}
+.item-names > div > span:nth-child(3) {
+  opacity: 0.9;
+}
+.item > img {
+  height: 15px;
+  width: 15px;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  padding: 10px;
+}
+.span-ele {
+  display: flex;
+  gap: 15px;
+}
+.remove-img {
+  width: 40px;
+  transition: transform 2s ease;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  border-radius: 50%;
+  border: none;
+}
+
+.remove-img:hover {
+  transform: scale(1.2);
+  border: 2px solid orangered;
+}
+.disable {
+  display: none;
+}
+.section-total,
+.section_total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.polution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: auto;
+  margin: 5px auto;
+  background-color: rgb(255, 228, 196, 0.5);
+  padding: 12px 18px;
+  gap: 8px;
+}
+
+.confirmation,
+.new_btn {
+  width: 100%;
+  padding: 12px 18px;
+  background-color: orangered;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  border: none;
+}
+
+.item_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.span-section {
+  display: flex;
+  gap: 4px;
+}
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.section_1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.item-img img {
+  width: 40px;
+  height: 40px;
+}
+.order_placed {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 40%;
+  z-index: 12;
+  width: 400px;
+  padding: 12px 20px;
+  border-radius: 20px;
+}
+.item_new_container {
+  padding: 8px 20px;
+  background-color: antiquewhite;
+}
+
+/* Existing styles remain unchanged */
+
+/* Responsive styles for mobile */
+body {
+  margin: 0px;
+  padding: 80px 120px;
+}
+
+/* Existing styles remain unchanged */
+
+/* Responsive styles for mobile */
+@media (max-width: 1180px) {
+  body {
+    padding: 40px 20px;
+  }
+  h3 {
+    text-align: center;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cart-row {
+    flex-direction: column;
+    height: auto;
+  }
+  .cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+  .cart-img {
+    height: 180px;
+    width: 180px;
+  }
+  .cart-btn,
+  .sec {
+    width: 120px;
+    height: 35px;
+    margin-top: 90px;
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+  .cart-about {
+    padding: 5px;
+    margin-right: 80px;
+  }
+  .cart-about > span {
+    font-size: 14px;
+  }
+  .cart-section {
+    background-color: bisque;
+    width: auto;
+    height: auto;
+    text-align: left;
+    position: relative;
+  }
+  .cart-section > h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .item-section {
+    width: 100%;
+  }
+  .items-container > div,
+  .item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .remove-img {
+    width: 30px;
+    height: 30px;
+  }
+  .confirmation,
+  .new_btn {
+    font-size: 16px;
+    padding: 10px 15px;
+    text-align: center;
+  }
+  .order_placed {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 400px;
+    bottom: 0px;
+    left: 0px;
+    backface-visibility: hidden;
+  }
+}
