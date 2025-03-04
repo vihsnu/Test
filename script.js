@@ -335,7 +335,7 @@ function addCartItem(itemName, itemCost, img_src) {
   removeBtn.classList.add("remove-img");
 
   let removeImg = document.createElement("img");
-  removeImg.src = "/Test/assets/images/icon-remove-item.svg";
+  removeImg.src = "/assets/images/icon-remove-item.svg";
   removeImg.alt = "Remove item";
 
   removeBtn.appendChild(removeImg);
